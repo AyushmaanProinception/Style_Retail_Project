@@ -49,7 +49,7 @@
     pointer-events: auto !important;
 }
 
-/* Search Input Box */
+
 .view:has(span[name="MyCustomer_List_Style_dlb"]) input[name*="Search"],
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) input[name*="Search"] {
     width: 240px !important;
@@ -68,7 +68,7 @@
     display: inline-block !important;
 }
 
-/* Search Button */
+
 .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Search"],
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Search"] {
     height: 38px !important;
@@ -94,7 +94,7 @@
     background: #956047 !important;
 }
 
-/* Clear Button */
+
 .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Clear"],
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Clear"] {
     height: 38px !important;
@@ -114,7 +114,7 @@
     border-radius: 4px !important;
 }
 
-/* Tab Filter Buttons */
+
 .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button All"],
 .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button In Progress"],
 .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Need attention"],
@@ -154,7 +154,7 @@
     color: #ffffff !important;
 }
 
-/* Add Customer Toolbar Button */
+
 .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"],
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"] {
     height: 38px !important;
@@ -187,7 +187,7 @@
     background: #956047 !important;
 }
 
-/* Grid Table Structure */
+
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-table,
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table,
 .view:has(span[name="MyCustomer_List_Style_dlb"]) table.grid-content-table,
@@ -203,7 +203,7 @@
     padding-left: 0 !important;
 }
 
-/* Header Cells */
+
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-table th,
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-table td,
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid thead th,
@@ -240,7 +240,7 @@
     align-items: center !important;
 }
 
-/* Rows and Data Cells */
+
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody tr,
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody tr {
     height: 54px !important;
@@ -291,7 +291,7 @@
     padding-right: 0 !important;
 }
 
-/* Badges & Pills */
+
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .unit-pill,
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) .unit-pill {
     display: inline-flex !important;

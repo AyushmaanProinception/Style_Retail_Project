@@ -25,7 +25,7 @@ $(document).ready(function () {
         
         $viewContainer.find('.grid-header-table th, .grid thead th, .grid-column-header-table td, .grid thead td').each(function (idx) {
             var title = $(this).text().trim().toUpperCase();
-            if (title.indexOf('UNIT') !== -1) {
+            if (title.indexOf('UNIT NUMBER') !== -1) {
                 unitColIndex = idx;
             } else if (title.indexOf('DAYS') !== -1 || title.indexOf('REMAINING') !== -1) {
                 daysColIndex = idx;
