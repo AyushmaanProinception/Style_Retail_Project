@@ -40,9 +40,12 @@ $(document).ready(function () {
                     if (unitColIndex !== -1 && $cells.length > unitColIndex) {
                         var $unitCell = $cells.eq(unitColIndex);
                         if (!$unitCell.data('formatted')) {
-                            var unitText = $unitCell.text().trim();
+                            var $innerWrapper = $unitCell.find('.grid-content-cell-wrapper');
+                            var unitText = $innerWrapper.length ? $innerWrapper.text().trim() : $unitCell.text().trim();
+                            
                             if (unitText !== '' && unitText !== '-' && unitText !== '—') {
-                                $unitCell.html('<span class="unit-pill">' + unitText + '</span>');
+                                var targetWrapper = $innerWrapper.length ? $innerWrapper : $unitCell;
+                                targetWrapper.html('<span class="unit-pill">' + unitText + '</span>');
                             }
                             $unitCell.data('formatted', true);
                         }
@@ -51,16 +54,18 @@ $(document).ready(function () {
                     if (daysColIndex !== -1 && $cells.length > daysColIndex) {
                         var $daysCell = $cells.eq(daysColIndex);
                         if (!$daysCell.data('formatted')) {
-                            var rawText = $daysCell.text().trim();
+                            var $daysWrapper = $daysCell.find('.grid-content-cell-wrapper');
+                            var rawText = $daysWrapper.length ? $daysWrapper.text().trim() : $daysCell.text().trim();
                             var lower = rawText.toLowerCase();
                             var numVal = parseInt(rawText, 10);
+                            var targetDaysWrapper = $daysWrapper.length ? $daysWrapper : $daysCell;
 
                             if (lower === 'completed') {
-                                $daysCell.html('<span class="days-pill-completed">Completed</span>');
+                                targetDaysWrapper.html('<span class="days-pill-completed">Completed</span>');
                             } else if (lower.indexOf('no longer') !== -1) {
-                                $daysCell.html('<span class="days-muted">' + rawText + '</span>');
-                            } else if (!isNaN(numVal) && numVal <= 90) {
-                                $daysCell.html('<span class="days-urgent">' + rawText + '</span>');
+                                targetDaysWrapper.html('<span class="days-muted">' + rawText + '</span>');
+                            } else if (!isNaN(numVal) && numVal <= 89) {
+                                targetDaysWrapper.html('<span class="days-urgent">' + rawText + '</span>');
                             }
                             $daysCell.data('formatted', true);
                         }
