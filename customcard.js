@@ -1,14 +1,13 @@
 $(document).ready(function () {
-    function formatDashboardCards() {
+    function formatViewDashboard() {
         var $cardsAnchor = $('span[name="card_style_dlb"]');
-        if ($cardsAnchor.length === 0) return;
+        var $viewContainer = $cardsAnchor.length ? $cardsAnchor.closest('.view') : $('.runtime-content, .panel').first();
 
-        var $viewContainer = $cardsAnchor.closest('.view');
+        if ($viewContainer.length === 0) $viewContainer = $(document);
 
-        // 1. Banner & Button Layout Fix
-        var bannerCell = $viewContainer.find('[name="Cell notification"]');
-        if (bannerCell.length && !bannerCell.hasClass('custom-banner-container')) {
-            bannerCell.addClass('custom-banner-container');
+        var bannerCell = $viewContainer.find('span[name="Cell Cell8"]');
+        if (bannerCell.length && !bannerCell.hasClass('custom-banner-applied')) {
+            bannerCell.addClass('custom-banner-applied');
             
             var welcomeLbl = $viewContainer.find('[name="Label_welcome"]');
             var nameLbl = $viewContainer.find('[name="Notification_name dlb"]');
@@ -18,7 +17,6 @@ $(document).ready(function () {
 
             if (bannerCell.find('.banner-left-group').length === 0) {
                 var iconHtml = '<div class="banner-icon-wrapper"><svg viewBox="0 0 24 24" width="24" height="24" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg></div>';
-                
                 var textWrapper = $('<div class="banner-text-wrapper"></div>');
                 var titleWrapper = $('<div class="banner-title"></div>');
                 
@@ -26,7 +24,6 @@ $(document).ready(function () {
                 textWrapper.append(titleWrapper).append(descLbl);
                 
                 var leftGroup = $('<div class="banner-left-group"></div>').append(iconHtml).append(textWrapper);
-                
                 bannerCell.prepend(leftGroup);
             }
 
@@ -36,8 +33,7 @@ $(document).ready(function () {
             btn.addClass('custom-btn');
         }
 
-        // 2. Metric Cards Formatting
-        var cardsTable = $viewContainer.find('[name="Table cards"]');
+        var cardsTable = $viewContainer.find('div[name="Table cards"]');
         if (cardsTable.length && !cardsTable.hasClass('custom-cards-table')) {
             cardsTable.addClass('custom-cards-table');
 
@@ -68,9 +64,9 @@ $(document).ready(function () {
         }
     }
 
-    formatDashboardCards();
+    formatViewDashboard();
 
     $(document).ajaxComplete(function () {
-        formatDashboardCards();
+        formatViewDashboard();
     });
 });
