@@ -201,6 +201,7 @@
     border-collapse: collapse !important;
     margin-left: 0 !important;
     padding-left: 0 !important;
+    background-color: #f6f1ee !important;
 }
 
 
@@ -231,6 +232,7 @@
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-cell-text,
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-column-header-text,
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-column-header-cell-content {
+    color: #8C7C70 !important;
     margin: 0 !important;
     padding: 0 !important;
     margin-left: 0 !important;
@@ -254,7 +256,7 @@
 
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody tr:hover,
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody tr:hover {
-    background: #f4ece7 !important;
+    background: #f6f1ee !important;
 }
 
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td,
