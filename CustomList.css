@@ -334,3 +334,9 @@
     font-size: 13px !important;
     font-weight: 400 !important;
 }
+
+.theme-entry .grid .grid-column-header-table,
+.theme-entry .grid .grid-column-header-table th,
+.theme-entry .grid .grid-column-header-table td {
+    background-color: #f6f1ee !important;
+}
