@@ -199,7 +199,7 @@
     width: 100% !important;
     table-layout: fixed !important;
     border-collapse: collapse !important;
-    margin-left: 0 !important;
+    margin-left: 4px !important;
     padding-left: 0 !important;
     background-color: #f6f1ee !important;
     --list-item-hover-background-color: #ede1da !important;
@@ -237,7 +237,7 @@
     color: #8C7C70 !important;
     margin: 0 !important;
     padding: 0 !important;
-    margin-left: 0 !important;
+    margin-left: 4px !important;
     padding-left: 0 !important;
     text-align: left !important;
     display: inline-flex !important;
