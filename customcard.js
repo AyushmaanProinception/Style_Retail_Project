@@ -5,7 +5,7 @@ $(document).ready(function () {
 
         if ($viewContainer.length === 0) $viewContainer = $(document);
 
-        var bannerCell = $viewContainer.find('span[name="Cell Cell8"]');
+        var bannerCell = $viewContainer.find('span[name="Cell Notification"]');
         if (bannerCell.length && !bannerCell.hasClass('custom-banner-applied')) {
             bannerCell.addClass('custom-banner-applied');
             
