@@ -342,3 +342,22 @@
 .theme-entry .grid .grid-column-header-table td {
     background-color: #f6f1ee !important;
 }
+
+.theme-entry div[name="Table_header"] {
+    height: 40px !important;
+    padding: 10px 14px !important;
+    background: #f3efed !important;
+    border-bottom: 1px solid #e3d9d4 !important;
+    box-sizing: border-box;
+    display: flex !important;
+    align-items: center;
+}
+
+.theme-entry div[name="Table_header"] [name="Header_name_label"] {
+    margin: 0 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: #5c524e !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
