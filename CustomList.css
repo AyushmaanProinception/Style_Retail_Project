@@ -343,23 +343,25 @@
     background-color: #f6f1ee !important;
 }
 
-/* Target the table row holding the header_name_label to create the background band */
-tr:has([name="header_name_label"]) {
-  background-color: #f5f0ec !important; /* Adjust to match your theme background */
-  border-bottom: 1px solid #e6ded8 !important;
+/* Apply background and layout to toolbars in views/grids that contain header_name_label */
+view:has([name="header_name_label"]) .grid-toolbars, 
+.grid:has([name="header_name_label"]) .grid-toolbars {
+    background: #f6f1ee !important;
+    padding: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    margin-left: 0 !important;
 }
 
-/* Add padding inside the header row cells */
-tr:has([name="header_name_label"]) td {
-  padding: 10px 16px !important;
-}
-
-/* Style the header_name_label text to be uppercase and bold */
+/* Style the header_name_label color and text properties */
 [name="header_name_label"] {
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  color: #332211 !important; /* Adjust text color as needed */
-  letter-spacing: 0.5px !important;
-  margin: 0 !important;
+    color: #765c4e !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin: 0 !important;
 }
