@@ -343,21 +343,23 @@
     background-color: #f6f1ee !important;
 }
 
-.theme-entry div[name="Table_header"] {
-    height: 40px !important;
-    padding: 10px 14px !important;
-    background: #f3efed !important;
-    border-bottom: 1px solid #e3d9d4 !important;
-    box-sizing: border-box;
-    display: flex !important;
-    align-items: center;
+/* Target the table row holding the header_name_label to create the background band */
+tr:has([name="header_name_label"]) {
+  background-color: #f5f0ec !important; /* Adjust to match your theme background */
+  border-bottom: 1px solid #e6ded8 !important;
 }
 
-.theme-entry div[name="Table_header"] [name="Header_name_label"] {
-    margin: 0 !important;
-    font-size: 12px !important;
-    font-weight: 700 !important;
-    color: #5c524e !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
+/* Add padding inside the header row cells */
+tr:has([name="header_name_label"]) td {
+  padding: 10px 16px !important;
+}
+
+/* Style the header_name_label text to be uppercase and bold */
+[name="header_name_label"] {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  color: #332211 !important; /* Adjust text color as needed */
+  letter-spacing: 0.5px !important;
+  margin: 0 !important;
 }
