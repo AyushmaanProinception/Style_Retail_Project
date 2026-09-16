@@ -343,9 +343,9 @@
     background-color: #f6f1ee !important;
 }
 
-/* Apply background and layout to toolbars in views/grids that contain header_name_label */
-view:has([name="header_name_label"]) .grid-toolbars, 
-.grid:has([name="header_name_label"]) .grid-toolbars {
+
+.theme-entry .view:has([name="header_name_label"]) .grid-toolbars, 
+.theme-entry .grid:has([name="header_name_label"]) .grid-toolbars {
     background: #f6f1ee !important;
     padding: 0px !important;
     display: flex !important;
@@ -356,8 +356,8 @@ view:has([name="header_name_label"]) .grid-toolbars,
     margin-left: 0 !important;
 }
 
-/* Style the header_name_label color and text properties */
-[name="header_name_label"] {
+
+.theme-entry [name="header_name_label"] {
     color: #765c4e !important;
     font-size: 13px !important;
     font-weight: 700 !important;
