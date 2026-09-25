@@ -369,6 +369,9 @@
 /*==============================
 Hiding the list buttons in the home page
 ===============================*/
+body:has(span[name="card_style_dlb"]) .theme-entry .toolbar>.toolbar-wrapper>table>tbody>tr>td>.SFC.SourceCode-Forms-Controls-Web-TextBox,
+body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Search"],
+body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Search"],
 body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button All"],
 body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button In Progress"],
 body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Need attention"],
