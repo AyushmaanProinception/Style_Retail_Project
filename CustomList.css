@@ -47,6 +47,7 @@
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) a.Edit-row {
     cursor: pointer !important;
     pointer-events: auto !important;
+    display: none !important 
 }
 
 
