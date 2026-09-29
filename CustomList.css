@@ -276,7 +276,7 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td > * {
     margin: 0 !important;
     padding: 0 !important;
-    text-align: left !important;
+   
     display: inline-block !important;
     box-sizing: border-box !important;
 }
