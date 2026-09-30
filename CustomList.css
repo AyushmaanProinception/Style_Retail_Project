@@ -203,6 +203,7 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
     padding-left: 0 !important;
     background-color: #f6f1ee !important;
     --list-item-hover-background-color: #ede1da !important;
+    --list-item-selected-background-color:#E2BEAA !important;
  
 }
 
