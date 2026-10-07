@@ -218,7 +218,7 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-cell,
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-column-header-table td {
     padding: 14px 16px 14px 0px !important;
-    text-align: left !important;
+    /* text-align: left !important; */
     font-size: 12px !important;
     font-weight: 700 !important;
     color: #8C8C8C !important;
@@ -268,7 +268,7 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
     border-bottom: 1px solid #ebe3de !important;
     font-size: 13px !important;
     color: #1F2937 !important;
-    text-align: left !important;
+    /* text-align: left !important; */
     vertical-align: middle !important;
     box-sizing: border-box !important;
 }
