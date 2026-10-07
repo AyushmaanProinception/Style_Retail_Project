@@ -240,7 +240,7 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
     padding: 0 !important;
     margin-left: 4px !important;
     padding-left: 0 !important;
-    text-align: left !important;
+    /* text-align: left !important; */
     display: inline-flex !important;
     align-items: center !important;
 }
