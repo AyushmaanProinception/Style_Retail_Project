@@ -177,6 +177,15 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
     vertical-align: middle !important;
 }
 
+/* RTL Override */
+[dir="rtl"] body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"],
+[dir="rtl"] body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"],
+body[dir="rtl"]:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"],
+body[dir="rtl"]:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"] {
+    margin-right: 230px !important;
+    margin-left: 0 !important;
+}
+
 body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-toolbars:has(a[name*="Add a customer"]),
 body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-toolbars:has(a[name*="Add a customer"]) {
     display: flex !important;
