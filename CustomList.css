@@ -156,18 +156,17 @@
 }
 
 
-body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"],
+body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"], 
 body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"] {
     height: 38px !important;
-    padding: 0 16px !important;
-    margin-left: auto !important;
-    margin-right: 0 !important;
+    padding-inline: 0 !important;
+    margin-inline: 0 !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     background: #a96f52 !important;
     border: none !important;
-    border-radius: 0px !important;
+    border-radius: 0 !important;
     color: #ffffff !important;
     text-decoration: none !important;
     font-weight: 700 !important;
