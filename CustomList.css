@@ -300,7 +300,7 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
 
 .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td:last-child,
 .grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td:last-child {
-    text-align: center !important;
+    /* text-align: center !important; */
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
