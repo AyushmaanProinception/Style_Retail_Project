@@ -1,10 +1,17 @@
 $(document).ready(function () {
     function formatViewDashboard() {
         var $cardsAnchor = $('span[name="card_style_dlb"]');
-        var $viewContainer = $cardsAnchor.length ? $cardsAnchor.closest('.view, .runtime-content, .panel') : $('.runtime-content, .panel').first();
+        if ($cardsAnchor.length === 0) return;
 
-        if ($viewContainer.length === 0) $viewContainer = $(document);
+        var $viewContainer = $cardsAnchor.closest('.view, .runtime-content, .panel');
+        if ($viewContainer.length === 0) {
+            $viewContainer = $('.runtime-content, .panel').first();
+        }
+        if ($viewContainer.length === 0) {
+            $viewContainer = $(document);
+        }
 
+        // 1. Banner & Button Formatting
         var bannerCell = $viewContainer.find('span[name="Cell Notification"]');
         if (bannerCell.length && !bannerCell.hasClass('custom-banner-applied')) {
             bannerCell.addClass('custom-banner-applied');
@@ -33,12 +40,13 @@ $(document).ready(function () {
             btn.addClass('custom-btn');
         }
 
+        // 2. Metric Cards Formatting
         var cardsTable = $viewContainer.find('div[name="Table cards"]');
         if (cardsTable.length) {
             cardsTable.addClass('custom-cards-table');
 
             var cardIcons = [
-                { svg: '<svg viewBox="0 0 24 24" width="20" height="20" stroke="#8D624B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>', bg: 'bg-icon-0' },
+                { svg: '<svg viewBox="0 0 24 24" width="20" height="20" stroke="#8D624B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>', bg: 'bg-icon-0' },
                 { svg: '<svg viewBox="0 0 24 24" width="20" height="20" stroke="#B87B41" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>', bg: 'bg-icon-1' },
                 { svg: '<svg viewBox="0 0 24 24" width="20" height="20" stroke="#D97706" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>', bg: 'bg-icon-2' },
                 { svg: '<svg viewBox="0 0 24 24" width="20" height="20" stroke="#50935A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>', bg: 'bg-icon-3' }
@@ -59,22 +67,29 @@ $(document).ready(function () {
                 if ($cell.find('.card-icon-wrapper').length === 0) {
                     $cell.prepend('<div class="card-icon-wrapper ' + iconData.bg + '">' + iconData.svg + '</div>');
                 }
-
-                $cell.off('click.cardNav').on('click.cardNav', function (e) {
-                    if (!$(e.target).is('a, button')) {
-                        var targetBtn = $(this).find('a.SourceCode-Forms-Controls-Web-Button, a[name*="Button"]').first();
-                        if (targetBtn.length) {
-                            targetBtn[0].click();
-                        }
-                    }
-                });
             });
         }
     }
 
+    // High-performance delegated card click handler (replaces binding on every individual element)
+    $(document).on('click', '.custom-card', function (e) {
+        if (!$(e.target).is('a, button, .card-number-btn')) {
+            var targetBtn = $(this).find('a.SourceCode-Forms-Controls-Web-Button, a[name*="Button"], .card-number-btn').first();
+            if (targetBtn.length) {
+                targetBtn[0].click();
+            }
+        }
+    });
+
     formatViewDashboard();
 
+    // PERF: debounced - batches multiple rapid K2 AJAX updates
+    var cardTimer = null;
     $(document).ajaxComplete(function () {
-        formatViewDashboard();
+        if (cardTimer) return;
+        cardTimer = setTimeout(function () {
+            cardTimer = null;
+            formatViewDashboard();
+        }, 100);
     });
 });
