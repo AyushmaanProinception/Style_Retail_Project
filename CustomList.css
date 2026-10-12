@@ -1,14 +1,16 @@
-.form > .row:has(span[name="MyCustomer_List_Style_dlb"]),
-.view:has(span[name="MyCustomer_List_Style_dlb"]),
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) {
+/* PERF: ".pi-has-*" classes replace ":has(marker)" selectors - set by Global.js.
+   ":is(*, span)" / ":is(*, a)" always match; they only keep the original specificity. */
+.form > .row.pi-has-mycust-list:is(*, span),
+.view.pi-has-mycust-list:is(*, span),
+.grid.pi-has-mycust-list:is(*, span) {
     box-sizing: border-box !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     width: 100% !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) {
+.view.pi-has-mycust-list:is(*, span) .grid,
+.grid.pi-has-mycust-list:is(*, span) {
     width: 100% !important;
     background: #ffffff !important;
     border: 1px solid #e5ddd7 !important;
@@ -20,8 +22,8 @@
     box-sizing: border-box !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-toolbars,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-toolbars {
+.view.pi-has-mycust-list:is(*, span) .grid-toolbars,
+.grid.pi-has-mycust-list:is(*, span) .grid-toolbars {
     background: #ffffff !important;
     padding: 16px 20px 16px 0px !important;
     display: flex !important;
@@ -32,27 +34,26 @@
     margin-left: 0 !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-toolbars > *,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-toolbars > * {
+.view.pi-has-mycust-list:is(*, span) .grid-toolbars > *,
+.grid.pi-has-mycust-list:is(*, span) .grid-toolbars > * {
     float: none !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a.SourceCode-Forms-Controls-Web-Button,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a.toolbar-button,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a.Edit-row,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) input[type="button"],
-.view:has(span[name="MyCustomer_List_Style_dlb"]) input[type="submit"],
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a.SourceCode-Forms-Controls-Web-Button,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a.toolbar-button,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a.Edit-row {
+.view.pi-has-mycust-list:is(*, span) a.SourceCode-Forms-Controls-Web-Button,
+.view.pi-has-mycust-list:is(*, span) a.toolbar-button,
+.view.pi-has-mycust-list:is(*, span) a.Edit-row,
+.view.pi-has-mycust-list:is(*, span) input[type="button"],
+.view.pi-has-mycust-list:is(*, span) input[type="submit"],
+.grid.pi-has-mycust-list:is(*, span) a.SourceCode-Forms-Controls-Web-Button,
+.grid.pi-has-mycust-list:is(*, span) a.toolbar-button,
+.grid.pi-has-mycust-list:is(*, span) a.Edit-row {
     cursor: pointer !important;
     pointer-events: auto !important;
-    
 }
 
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) input[name*="Search"],
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) input[name*="Search"] {
+.view.pi-has-mycust-list:is(*, span) input[name*="Search"],
+.grid.pi-has-mycust-list:is(*, span) input[name*="Search"] {
     width: 240px !important;
     height: 38px !important;
     padding: 0 12px !important;
@@ -70,8 +71,8 @@
 }
 
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Search"],
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Search"] {
+.view.pi-has-mycust-list:is(*, span) a[name*="Search"],
+.grid.pi-has-mycust-list:is(*, span) a[name*="Search"] {
     height: 38px !important;
     padding: 0 14px !important;
     display: inline-flex !important;
@@ -90,14 +91,14 @@
     margin-left: 6px !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Search"]:hover,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Search"]:hover {
+.view.pi-has-mycust-list:is(*, span) a[name*="Search"]:hover,
+.grid.pi-has-mycust-list:is(*, span) a[name*="Search"]:hover {
     background: #956047 !important;
 }
 
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Clear"],
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Clear"] {
+.view.pi-has-mycust-list:is(*, span) a[name*="Clear"],
+.grid.pi-has-mycust-list:is(*, span) a[name*="Clear"] {
     height: 38px !important;
     padding: 0 14px !important;
     display: inline-flex !important;
@@ -116,14 +117,14 @@
 }
 
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button All"],
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button In Progress"],
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Need attention"],
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Completed"],
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button All"],
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button In Progress"],
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Need attention"],
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Completed"] {
+.view.pi-has-mycust-list:is(*, span) a[name="Button All"],
+.view.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+.view.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+.view.pi-has-mycust-list:is(*, span) a[name="Button Completed"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button All"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button Completed"] {
     height: 38px !important;
     padding: 0 14px !important;
     display: inline-flex !important;
@@ -149,15 +150,15 @@
     border-radius: 0 0px 0px 0 !important;
 } */
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) a[name^="Button "].active,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name^="Button "].active {
+.view.pi-has-mycust-list:is(*, span) a[name^="Button "].active,
+.grid.pi-has-mycust-list:is(*, span) a[name^="Button "].active {
     background: #a96f52 !important;
     color: #ffffff !important;
 }
 
 
-body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"],
-body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"] {
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"] {
     height: 38px !important;
     padding: 0 16px !important;
     margin-left: auto !important;
@@ -178,33 +179,33 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
 }
 
 /* RTL Override */
-[dir="rtl"] body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"],
-[dir="rtl"] body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"],
-body[dir="rtl"]:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"],
-body[dir="rtl"]:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"] {
+[dir="rtl"] body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+[dir="rtl"] body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+body[dir="rtl"].pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+body[dir="rtl"].pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"] {
     margin-right: 230px !important;
     margin-left: 0 !important;
 }
 
-body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-toolbars:has(a[name*="Add a customer"]),
-body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-toolbars:has(a[name*="Add a customer"]) {
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) .grid-toolbars:has(a[name*="Add a customer"]),
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) .grid-toolbars:has(a[name*="Add a customer"]) {
     display: flex !important;
     justify-content: flex-start !important;
 }
 
-body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"]:hover,
-body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Add a customer"]:hover {
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"]:hover,
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"]:hover {
     background: #956047 !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-table,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) table.grid-content-table,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) table.grid-header-table,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-table,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) table.grid-content-table,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) table.grid-header-table {
+.view.pi-has-mycust-list:is(*, span) .grid-table,
+.view.pi-has-mycust-list:is(*, span) .grid-content-table,
+.view.pi-has-mycust-list:is(*, span) table.grid-content-table,
+.view.pi-has-mycust-list:is(*, span) table.grid-header-table,
+.grid.pi-has-mycust-list:is(*, span) .grid-table,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table,
+.grid.pi-has-mycust-list:is(*, span) table.grid-content-table,
+.grid.pi-has-mycust-list:is(*, span) table.grid-header-table {
     width: 100% !important;
     table-layout: fixed !important;
     border-collapse: collapse !important;
@@ -212,20 +213,19 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
     padding-left: 0 !important;
     background-color: #f6f1ee !important;
     --list-item-hover-background-color: #ede1da !important;
-    --list-item-selected-background-color:#E2BEAA !important;
- 
+    --list-item-selected-background-color: #E2BEAA !important;
 }
 
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-table th,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-table td,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid thead th,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-cell,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-table th,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-table td,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid thead th,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-cell,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-column-header-table td {
+.view.pi-has-mycust-list:is(*, span) .grid-header-table th,
+.view.pi-has-mycust-list:is(*, span) .grid-header-table td,
+.view.pi-has-mycust-list:is(*, span) .grid thead th,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell,
+.grid.pi-has-mycust-list:is(*, span) .grid-header-table th,
+.grid.pi-has-mycust-list:is(*, span) .grid-header-table td,
+.grid.pi-has-mycust-list:is(*, span) .grid thead th,
+.grid.pi-has-mycust-list:is(*, span) .grid-header-cell,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-table td {
     padding: 14px 16px 14px 0px !important;
     /* text-align: left !important; */
     font-size: 12px !important;
@@ -237,13 +237,13 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
     vertical-align: middle !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-table th > *,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-cell > *,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-cell-content,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-cell-label,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-cell-text,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-column-header-text,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-column-header-cell-content {
+.view.pi-has-mycust-list:is(*, span) .grid-header-table th > *,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell > *,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell-content,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell-label,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell-text,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-text,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-cell-content {
     color: #8C7C70 !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -255,24 +255,24 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
 }
 
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody tr,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody tr {
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr {
     height: 54px !important;
     background: #ffffff !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody tr:nth-child(even),
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody tr:nth-child(even) {
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:nth-child(even),
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:nth-child(even) {
     background: #fbf7f4 !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody tr:hover,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody tr:hover {
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:hover,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:hover {
     background: #f6f1ee !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td {
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td {
     padding: 0 16px 0 0px !important;
     border-bottom: 1px solid #ebe3de !important;
     font-size: 13px !important;
@@ -282,32 +282,31 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
     box-sizing: border-box !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td > *,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td > * {
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td > *,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td > * {
     margin: 0 !important;
     padding: 0 !important;
-   
     display: inline-block !important;
     box-sizing: border-box !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-header-table th:first-child,
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td:first-child,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-column-header-table td:first-child,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td:first-child {
+.view.pi-has-mycust-list:is(*, span) .grid-header-table th:first-child,
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:first-child,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-table td:first-child,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:first-child {
     padding-left: 0px !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td:last-child,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .grid-content-table tbody td:last-child {
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:last-child,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:last-child {
     /* text-align: center !important; */
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .unit-pill,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .unit-pill {
+.view.pi-has-mycust-list:is(*, span) .unit-pill,
+.grid.pi-has-mycust-list:is(*, span) .unit-pill {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -320,15 +319,15 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
     letter-spacing: 0.3px !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .days-urgent,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .days-urgent {
+.view.pi-has-mycust-list:is(*, span) .days-urgent,
+.grid.pi-has-mycust-list:is(*, span) .days-urgent {
     color: #D9381E !important;
     font-weight: 700 !important;
     font-size: 13px !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .days-pill-completed,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .days-pill-completed {
+.view.pi-has-mycust-list:is(*, span) .days-pill-completed,
+.grid.pi-has-mycust-list:is(*, span) .days-pill-completed {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -340,8 +339,8 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
     font-weight: 600 !important;
 }
 
-.view:has(span[name="MyCustomer_List_Style_dlb"]) .days-muted,
-.grid:has(span[name="MyCustomer_List_Style_dlb"]) .days-muted {
+.view.pi-has-mycust-list:is(*, span) .days-muted,
+.grid.pi-has-mycust-list:is(*, span) .days-muted {
     color: #8C8C8C !important;
     font-size: 13px !important;
     font-weight: 400 !important;
@@ -354,8 +353,8 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
 }
 
 
-.theme-entry .view:has([name="header_name_label"]) .grid-toolbars, 
-.theme-entry .grid:has([name="header_name_label"]) .grid-toolbars {
+.theme-entry .view.pi-has-header-name .grid-toolbars, 
+.theme-entry .grid.pi-has-header-name .grid-toolbars {
     background: #f6f1ee !important;
     padding: 0px !important;
     display: flex !important;
@@ -379,17 +378,17 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
 /*==============================
 Hiding the list buttons in the home page
 ===============================*/
-body:has(span[name="card_style_dlb"]) .theme-entry .toolbar>.toolbar-wrapper>table>tbody>tr>td>.SFC.SourceCode-Forms-Controls-Web-TextBox,
-body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Search"],
-body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name*="Search"],
-body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button All"],
-body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button In Progress"],
-body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Need attention"],
-body:has(span[name="card_style_dlb"]) .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Completed"],
-body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button All"],
-body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button In Progress"],
-body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Need attention"],
-body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Completed"] {
+body.pi-has-card-style:is(*, span) .theme-entry .toolbar>.toolbar-wrapper>table>tbody>tr>td>.SFC.SourceCode-Forms-Controls-Web-TextBox,
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Search"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Search"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button All"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button Completed"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button All"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button Completed"] {
     display: none !important;
 }
 
@@ -397,7 +396,7 @@ body:has(span[name="card_style_dlb"]) .grid:has(span[name="MyCustomer_List_Style
   grid toolbar hieght fix for customer dashboard page
 =====================================================*/
 
-body:has(span[name*="card_style_dlb"]) .view:has(span[name*="MyCustomer_List_Style_dlb"]) .grid-toolbars,
-body:has(span[name*="card_style_dlb"]) .grid:has(span[name*="MyCustomer_List_Style_dlb"]) .grid-toolbars {
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) .grid-toolbars,
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) .grid-toolbars {
     height: 80px !important;
 }
